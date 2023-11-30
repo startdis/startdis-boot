@@ -72,27 +72,6 @@
             <artifactId>cglib</artifactId>
         </dependency>
 
-        <!--启迪公共模块-->
-        <dependency>
-            <groupId>com.startdis.comm</groupId>
-            <artifactId>comm-exception</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.startdis.comm</groupId>
-            <artifactId>comm-minio</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.startdis.comm</groupId>
-            <artifactId>comm-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.startdis.comm</groupId>
-            <artifactId>comm-thread</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.startdis.comm</groupId>
-            <artifactId>comm-util</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.startdis.comm</groupId>
             <artifactId>comm-feign</artifactId>
