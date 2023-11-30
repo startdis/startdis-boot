@@ -109,7 +109,6 @@
                 <version>${spring-cloud-alibaba.version}</version>
             </dependency>
             <!--启迪公共依赖开始-->
-            <!--核心依赖-->
             <dependency>
                 <groupId>com.startdis.comm</groupId>
                 <artifactId>comm-core</artifactId>
