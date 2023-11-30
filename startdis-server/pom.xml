@@ -14,11 +14,6 @@
     </parent>
 
     <dependencies>
-        <!--内部模块依赖-->
-        <!--<dependency>
-            <groupId>com.startdis</groupId>
-            <artifactId>startdis-comm</artifactId>
-        </dependency>-->
         <dependency>
             <groupId>com.startdis</groupId>
             <artifactId>startdis-infra</artifactId>

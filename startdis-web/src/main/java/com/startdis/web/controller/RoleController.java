@@ -9,7 +9,7 @@ import com.github.xiaoymin.knife4j.annotations.ApiSort;
 import com.startdis.comm.domain.bean.PagerBean;
 import com.startdis.comm.domain.bean.ResultBean;
 import com.startdis.comm.domain.model.PageQuery;
-import com.startdis.comm.kits.bean.BeanCopyKits;
+import com.startdis.comm.util.bean.BeanCopyKits;
 import com.startdis.domain.model.converter.RoleConverter;
 import com.startdis.domain.model.dto.post.RolePostDTO;
 import com.startdis.domain.model.dto.put.RolePutDTO;

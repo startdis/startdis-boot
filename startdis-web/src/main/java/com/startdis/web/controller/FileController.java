@@ -2,9 +2,9 @@ package com.startdis.web.controller;
 
 
 import com.startdis.comm.domain.bean.ResultBean;
-import com.startdis.comm.kits.auth.AuthInfoUtils;
 import com.startdis.comm.minio.domian.FileInfoVO;
 import com.startdis.comm.minio.service.MinIOService;
+import com.startdis.comm.util.auth.AuthInfoUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.io.IOUtils;

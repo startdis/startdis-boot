@@ -14,10 +14,9 @@
     </parent>
 
     <dependencies>
-        <!--startdis-comm-->
         <dependency>
-            <groupId>com.startdis</groupId>
-            <artifactId>startdis-comm</artifactId>
+            <groupId>com.startdis.comm</groupId>
+            <artifactId>comm-feign</artifactId>
         </dependency>
         <!--servlet-api-->
         <dependency>

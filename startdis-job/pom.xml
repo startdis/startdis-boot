@@ -15,6 +15,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.startdis.comm</groupId>
+            <artifactId>comm-job</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.startdis</groupId>
             <artifactId>startdis-server</artifactId>
         </dependency>

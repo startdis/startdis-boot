@@ -15,9 +15,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.startdis</groupId>
-            <artifactId>startdis-comm</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.startdis.comm</groupId>
+            <artifactId>comm-jdbc</artifactId>
         </dependency>
         <dependency>
             <groupId>com.startdis</groupId>

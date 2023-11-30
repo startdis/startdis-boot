@@ -9,7 +9,6 @@
     <version>1.0.0</version>
 
     <modules>
-        <module>startdis-comm</module>
         <module>startdis-domain</module>
         <module>startdis-infra</module>
         <module>startdis-server</module>
@@ -109,13 +108,81 @@
                 <type>pom</type>
                 <version>${spring-cloud-alibaba.version}</version>
             </dependency>
-
-            <!--内部服务引用开始-->
+            <!--启迪公共依赖开始-->
+            <!--核心依赖-->
             <dependency>
-                <groupId>com.startdis</groupId>
-                <artifactId>startdis-comm</artifactId>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-core</artifactId>
                 <version>${startdis.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-domain</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-jdbc</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-exception</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-minio</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-redis</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-thread</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-util</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-job</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-auth</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-safe</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-swagger</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-feign</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.startdis.comm</groupId>
+                <artifactId>comm-web</artifactId>
+                <version>${startdis.version}</version>
+            </dependency>
+            <!--启迪公共依赖结束-->
+
+            <!--内部服务引用开始-->
             <dependency>
                 <groupId>com.startdis</groupId>
                 <artifactId>startdis-domain</artifactId>
@@ -195,12 +262,12 @@
                 <version>${mysql.version}</version>
             </dependency>
             <!-- postgresql -->
-            <dependency>
-                <artifactId>postgresql</artifactId>
-                <groupId>org.postgresql</groupId>
-                <scope>runtime</scope>
-                <version>${postgresql.version}</version>
-            </dependency>
+            <!--<dependency>-->
+            <!--    <artifactId>postgresql</artifactId>-->
+            <!--    <groupId>org.postgresql</groupId>-->
+            <!--    <scope>runtime</scope>-->
+            <!--    <version>${postgresql.version}</version>-->
+            <!--</dependency>-->
             <!--liquibase-->
             <!--<dependency>
                 <groupId>org.liquibase</groupId>
@@ -208,106 +275,6 @@
                 <version>${liquibase.version}</version>
             </dependency>-->
             <!--数据库相关依赖结束-->
-
-            <!--webservices-server-->
-            <!-- CXF RS 核心包 -->
-            <dependency>
-                <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- cxf rs 扩展 -->
-            <dependency>
-                <artifactId>cxf-rt-rs-extension-providers</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- rs cors认证 -->
-            <dependency>
-                <artifactId>cxf-rt-rs-security-cors</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- swagger API文档生成 -->
-            <dependency>
-                <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- RESTful WADL生成 -->
-            <dependency>
-                <artifactId>cxf-rt-rs-service-description</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- CXF WS 核心包 -->
-            <dependency>
-                <artifactId>cxf-rt-frontend-jaxws</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- CXF WS 安全管理 -->
-            <dependency>
-                <artifactId>cxf-rt-ws-security</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- CXF HTTP传输 -->
-            <dependency>
-                <artifactId>cxf-rt-transports-http</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- cxf HTTP传输 jetty支持 -->
-            <dependency>
-                <artifactId>cxf-rt-transports-http-jetty</artifactId>
-                <groupId>org.apache.cxf</groupId>
-                <version>${cxf.version}</version>
-            </dependency>
-            <!-- cxf 依赖包 end -->
-            <!--webservices-server-->
-            <!--webservices-client-->
-            <dependency>
-                <artifactId>axis</artifactId>
-                <groupId>org.apache.axis</groupId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>axis-ant</artifactId>
-                <groupId>org.apache.axis</groupId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>axis-saaj</artifactId>
-                <groupId>axis</groupId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>axis-jaxrpc</artifactId>
-                <groupId>org.apache.axis</groupId>
-                <version>${axis.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>wsdl4j</artifactId>
-                <groupId>wsdl4j</groupId>
-                <version>${wsdl4j.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>activation</artifactId>
-                <groupId>javax.activation</groupId>
-                <version>${activation.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>mail</artifactId>
-                <groupId>javax.mail</groupId>
-                <version>${mail.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>javax.xml.soap-api</artifactId>
-                <groupId>javax.xml.soap</groupId>
-                <version>${soap-api.version}</version>
-            </dependency>
-            <!--webservices-client-->
 
             <!--其他公共依赖开始-->
             <!-- commons -->
@@ -335,11 +302,6 @@
                 <artifactId>commons-logging</artifactId>
                 <groupId>commons-logging</groupId>
                 <version>${commons-logging.version}</version>
-            </dependency>
-            <dependency>
-                <artifactId>commons-discovery</artifactId>
-                <groupId>commons-discovery</groupId>
-                <version>${commons-discovery.version}</version>
             </dependency>
             <dependency>
                 <artifactId>commons-net</artifactId>
@@ -394,12 +356,6 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <groupId>javax.servlet</groupId>
                 <version>${javax.version}</version>
-            </dependency>
-            <!-- java-websocket -->
-            <dependency>
-                <artifactId>Java-WebSocket</artifactId>
-                <groupId>org.java-websocket</groupId>
-                <version>${java-websocket.version}</version>
             </dependency>
             <!-- redisson -->
             <dependency>
@@ -575,48 +531,34 @@
                 <groupId>org.mapstruct</groupId>
                 <version>${mapstruct.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.bgee.log4jdbc-log4j2</groupId>
-                <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-                <version>1.16</version>
-            </dependency>
             <!--其他公共依赖结束-->
         </dependencies>
     </dependencyManagement>
-    <description>startdis-boot</description>
-    <developers>
-        <developer>
-            <email>startdis@dianjiukeji.cn</email>
-            <id>Startdis</id>
-            <name>Startdis boot</name>
-            <url>https://boot.dianjiuorg.com</url>
-        </developer>
-    </developers>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>public</id>
-            <name>aliyun nexus</name>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>https://maven.aliyun.com/repository/public</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>release</name>
+            <url>https://nexus.njydsz.com/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>snapshot</name>
+            <url>https://nexus.njydsz.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.9.0</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
-                <groupId>org.apache.maven.plugins</groupId>
             </plugin>
         </plugins>
     </build>
