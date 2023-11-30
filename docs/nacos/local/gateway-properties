@@ -1,0 +1,16 @@
+[{
+	"id": "startdis-web",
+	"uri": "lb://startdis-web",
+	"predicates": [{
+		"name": "Path",
+		"args": {
+			"pattern": "/api/web/startdis/**"
+		}
+	}],
+	"filters": [{
+		"name": "StripPrefix",
+		"args": {
+			"parts": "3"
+		}
+	}]
+}]

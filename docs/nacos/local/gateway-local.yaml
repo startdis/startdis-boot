@@ -1,0 +1,77 @@
+spring:
+  cloud:
+    # gateway 配置
+    gateway:
+      discovery:
+        locator:
+          #表明gateway开启服务注册和发现的功能，并且Spring cloud gateway自动根据服务发现为每一个服务创建了一个router，这个router将以服务名开头的请求路径转发到对应的服务
+          enabled: true
+          #是将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了
+          lowerCaseServiceId: true
+          #另一种写法
+          #lower-case-service-id: true
+      #路由配置
+      # routes:
+      #   - id: startdis-web
+      #     uri: lb://startdis-web
+      #     # uri: http://127.0.0.1:18081/
+      #     predicates:
+      #       - Path=/api/web/startdis/**
+      #     filters:
+      #       - StripPrefix=3
+      #跨域设置
+      globalcors:
+        # 解决options请求被拦截问题
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            # 允许哪些网站的跨域请求 
+            allowedOriginPatterns: "*"
+            # 允许的跨域的请求方式
+            allowedMethods: "*"
+            # 允许在请求中携带的头信息
+            allowedHeaders: "*"
+            # 是否允许携带cookie
+            allowCredentials: true
+            # 这次跨域检测的有效期
+            maxAge: 360000
+
+# 安全配置
+security:
+  # 不校验白名单
+  ignore:
+    urls:
+      - "/api/web/sso/login"
+      - "/api/web/sso/register"
+      - "/api/web/**/v2/api-docs"
+ 
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+# 开启系统操作日志
+log:
+  record:
+    enabled: true
+# 日志输出路径配置
+logback:
+  logDir: /Users/dianjiu/startdis-cloud/gateway/
+# 定义日志输出级别
+logging:
+  level:
+    com.scm: info
+    #spring 包日志输出级别
+    org.springframework: info
+    com.alibaba.cloud: info
+    # undertow
+    io.undertow: info
+    # mybatis-plus
+    com.baomidou.mybatisplus: debug
+    com.scm.scheduling.infra.mapper: debug
+
