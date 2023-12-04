@@ -7,16 +7,16 @@ Startdis Boot (启迪) 是一款企业级单体架构的开发平台，是采用
 
 ## 相关链接
 ### 项目源码
-Gitee：https://gitee.com/startdis/sdt-cms  
-Github：https://github.com/startdis/sdt-cms  
-Gitlab：https://gitlab.com/startdis/sdt-cms
+Gitee：https://gitee.com/startdis/startdis-boot 
+Github：https://github.com/startdis/startdis-boot   
+Gitlab：https://gitlab.com/startdis/startdis-boot
 
 ### 关于启迪
 启迪平台：https://startdis.com
 
-项目文档：https://startdis.com/docs/cms
+项目文档：https://startdis.com/docs/boot
 
-体验地址：https://cms.startdis.top
+体验地址：https://cloud.startdis.top
 - startdis/startdis2022
 
 ## 系统架构（）
