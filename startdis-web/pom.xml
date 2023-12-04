@@ -72,10 +72,10 @@
             <artifactId>cglib</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.startdis.comm</groupId>
-            <artifactId>comm-feign</artifactId>
-        </dependency>
+        <!--<dependency>-->
+        <!--    <groupId>com.startdis.comm</groupId>-->
+        <!--    <artifactId>comm-feign</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
