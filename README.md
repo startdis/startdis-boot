@@ -1,5 +1,4 @@
 <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Startdis Boot</h1>
-<h4 align="center">基于Spring Boot 单体微服务架构</h4>
 
 ## 平台简介
 
